@@ -5,4 +5,4 @@ This repo contains the source code, data, and documentation for the Coursera Get
 
 The script assumes that the zipped file for the assignment has been unzipped in the same directory as the run_analysis.R file.
 
-The script reads the two "X" files in the UCI HAR Dataset folder and combines them into a single dplyr data frame.
+The script reads the two "X" files in the UCI HAR Dataset folder and combines them into a single dplyr data frame. Then it reads the "features.txt" file to get human-readable column names and replaces the column numbers with the names.

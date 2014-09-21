@@ -21,5 +21,10 @@ run_analysis <- function() {
                        all = TRUE)
     ## Make the resulting table into a plyr data frame for ease of use.
     phoneData <- tbl_df(phoneData)
-    phoneData
+    ## Get human-readable column names from the features text file.
+    featureNames <- read.table("./UCI HAR Dataset/features.txt")
+    ## Set column names in table with human-readable names.
+    colnames(phoneData) <- featureNames$V2
+    tidyData <- phoneData
+    write.table(tidyData, "./tidyData.txt", row.name = FALSE)
 }
